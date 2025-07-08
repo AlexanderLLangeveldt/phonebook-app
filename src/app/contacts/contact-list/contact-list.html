@@ -1,0 +1,37 @@
+<div class="contact-list-container">
+  <h2>Phonebook</h2>
+  <button (click)="openAddModal()">+ Add Contact</button>
+
+  <table id="contacts-table" class="display">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of contacts">
+        <td>
+          <button (click)="editContact(contact)">Edit</button>
+          <button (click)="deleteContact(contact.id)">Delete</button>
+        </td>
+        <td>{{ contact.name }}</td>
+        <td>{{ contact.phone }}</td>
+        <td>{{ contact.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Modal -->
+  <div class="modal" *ngIf="showModal">
+    <div class="modal-content">
+      <app-contact-form
+        [contact]="selectedContact"
+        (formSubmit)="onFormSubmit($event)"
+        (cancel)="onCancel()"
+      ></app-contact-form>
+    </div>
+  </div>
+</div>

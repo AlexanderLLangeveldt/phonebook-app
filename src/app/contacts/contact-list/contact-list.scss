@@ -1,0 +1,98 @@
+// Container styling and fonts
+.contact-list-container {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+// Button styling
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0.25rem;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+// Table styling
+#contacts-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 4px;
+  overflow: hidden;
+}
+#contacts-table th,
+#contacts-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+#contacts-table th {
+  background-color: #f9f9f9;
+  color: #555;
+  font-weight: bold;
+}
+#contacts-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+// Modal styling
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+// Style DataTables elements
+.dataTables_filter input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.4rem;
+  margin-left: 0.5rem;
+}
+.dataTables_paginate a {
+  padding: 0.3rem 0.6rem;
+  margin: 0 0.2rem;
+  background-color: #007bff;
+  color: white !important;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.dataTables_paginate a:hover {
+  background-color: #0056b3;
+}
+.dataTables_wrapper .dataTables_info {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #666;
+}
